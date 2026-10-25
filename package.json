@@ -1,0 +1,44 @@
+{
+  "name": "aws-bleed",
+  "version": "0.1.0",
+  "description": "Read-only AWS waste scanner: NAT endpoint tax, infinite logs, zombie EBS/EIPs — USD/mo + Terraform fix",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "aws-bleed": "./dist/cli.js"
+  },
+  "main": "./dist/cli.js",
+  "exports": {
+    ".": "./dist/cli.js",
+    "./bridge": "./dist/bridge.js"
+  },
+  "files": [
+    "dist",
+    "SKILL.md",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && vitest run",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudwatch-logs": "^3.750.0",
+    "@aws-sdk/client-ec2": "^3.750.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "publint": "^0.3.12",
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.5"
+  },
+  "author": "Augusto Cerrutti <augustocerruttisatto@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kanchingyg/aws-bleed.git"
+  }
+}
