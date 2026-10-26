@@ -1,0 +1,6 @@
+src/*.ts linguist-vendored
+src/**/*.ts linguist-vendored
+test/**/*.ts linguist-vendored
+dist/* linguist-vendored
+dist/**/* linguist-vendored
+bin/*.js linguist-vendored

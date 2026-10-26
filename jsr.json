@@ -1,0 +1,23 @@
+{
+  "name": "@kanchingyg/aws-bleed",
+  "version": "0.1.1",
+  "description": "Read-only AWS waste scanner: NAT endpoint tax, infinite logs, zombie EBS/EIPs: USD/mo + Terraform fix",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/cli.ts",
+    "./bridge": "./src/bridge.ts"
+  },
+  "publish": {
+    "include": [
+      "src/**/*.ts",
+      "LICENSE",
+      "README.md",
+      "SKILL.md",
+      "jsr.json"
+    ],
+    "exclude": [
+      "src/**/*.test.ts",
+      "src/**/*.spec.ts"
+    ]
+  }
+}

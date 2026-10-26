@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.kanchingyg/aws-bleed",
+  "description": "Read-only AWS waste scanner: NAT tax, infinite logs, zombie EBS/EIPs: USD/mo + Terraform fix",
+  "repository": {
+    "url": "https://github.com/kanchingyg/aws-bleed",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "aws-bleed",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
