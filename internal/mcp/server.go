@@ -19,7 +19,7 @@ import (
 
 const (
 	DefaultNCtx   = 4096
-	Version       = "0.1.0"
+	Version       = "0.1.1"
 	truncMarker   = "[…truncated by aws-bleed…]"
 	protocolVer   = "2024-11-05"
 )

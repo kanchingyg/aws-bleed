@@ -6,10 +6,6 @@
 [![JSR Score](https://jsr.io/badges/@kanchingyg/aws-bleed/score)](https://jsr.io/@kanchingyg/aws-bleed/score)
 [![Go](https://img.shields.io/badge/engine-Go_%2B_TypeScript-00ADD8)](https://github.com/kanchingyg/aws-bleed)
 [![license](https://img.shields.io/github/license/kanchingyg/aws-bleed)](https://github.com/kanchingyg/aws-bleed/blob/HEAD/LICENSE)
-[![npm](https://img.shields.io/npm/v/aws-bleed)](https://www.npmjs.com/package/aws-bleed)
-[![JSR](https://jsr.io/badges/@kanchingyg/aws-bleed)](https://jsr.io/@kanchingyg/aws-bleed)
-[![Go](https://img.shields.io/badge/engine-Go-00ADD8)](https://github.com/kanchingyg/aws-bleed)
-[![license](https://img.shields.io/github/license/kanchingyg/aws-bleed)](https://github.com/kanchingyg/aws-bleed/blob/HEAD/LICENSE)
 
 **5-second read-only scan** for expensive AWS hidden taxes: NAT Gateway traffic to S3/DynamoDB without free gateway endpoints, CloudWatch Logs with infinite retention, `gp2` and orphaned EBS volumes, idle Elastic IPs, and stale snapshots, complete with **USD/month estimates** and a **`fix-bleed.tf`** Terraform patch.
 

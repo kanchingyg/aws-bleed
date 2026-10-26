@@ -1,4 +1,11 @@
+import { readFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, it, expect, beforeEach, vi } from "vitest";
+
+const PKG_VERSION = JSON.parse(
+  readFileSync(join(dirname(fileURLToPath(import.meta.url)), "..", "package.json"), "utf8"),
+).version as string;
 import { PRICING, formatFindingsTable, scanAwsWaste, totalMonthlyUsd, truncateFindingsForMcp, } from "../src/scanners.js";
 import { escapeHclString, generateFinopsPatch } from "../src/terraform-patch.js";
 import { paginateWithToken } from "../src/aws-live.js";
@@ -158,14 +165,14 @@ describe("MCP JSON-RPC", () => {
             handlers: new Map(),
             toWsl: false,
             serverName: "aws-bleed",
-            version: "0.1.0",
+            version: PKG_VERSION,
         });
         dispatchMcpMessage({ jsonrpc: "2.0", id: 2, method: "tools/list", params: {} }, {
             tools,
             handlers: new Map(),
             toWsl: false,
             serverName: "aws-bleed",
-            version: "0.1.0",
+            version: PKG_VERSION,
         });
         const init = JSON.parse(jsonRpcFrameLog[0].trim());
         expect(init.result.serverInfo.name).toBe("aws-bleed");

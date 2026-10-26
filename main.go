@@ -11,7 +11,7 @@ import (
 	"github.com/kanchingyg/aws-bleed/internal/terraform"
 )
 
-const version = "0.1.0"
+const version = "0.1.1"
 
 type cliArgs struct {
 	mcp        bool
